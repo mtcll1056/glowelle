@@ -28,7 +28,7 @@ body {
     left: 0;
     bottom: 0;
     height: 0;
-    width:1440px;
+    width:100%;
     padding-top: 11.27%;
     background: url(../image/mv-wave.svg) center bottom / 100% no-repeat;
     z-index: 5;
@@ -134,7 +134,7 @@ a.hero_btn:active {
 
 /* tagline（画像2枚） */
 .image_wrapper {
-    width: 1440px;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     background-color: #FCECEC;
@@ -162,7 +162,7 @@ a.hero_btn:active {
 /* テキスト重ね */
 .tagline-box {
     position: relative;
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -186,7 +186,7 @@ a.hero_btn:active {
 }
 
 .intro_box {
-    width: 1440px;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
