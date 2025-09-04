@@ -4,6 +4,7 @@ body {
     color: #444444;
 }
 
+
 .container-s {
     margin: 0 auto;
     width: min(100%, 1024px);
@@ -27,17 +28,16 @@ body {
     left: 0;
     bottom: 0;
     height: 0;
-    width: 100%;
+    width:1440px;
     padding-top: 11.27%;
     background: url(../image/mv-wave.svg) center bottom / 100% no-repeat;
     z-index: 5;
-    padding-bottom: 120px;
 }
 
 /* 1100pxの箱を作りたい */
 .hero_inner {
-    padding-top: 120px;
-    padding-bottom: 160px;
+    padding-top: 8.3vw;
+    padding-bottom: 15.11vw;
     display: flex;
     align-items: flex-start;
     gap: 40px;
@@ -59,8 +59,8 @@ body {
 /* 画像（右寄せ・下揃え） */
 .main-visual {
     position: absolute;
-    width: 685px;
-    right: -100px;
+    width: min(47.5vw, 710px);
+    right: -6.944vw;
     bottom: 0;
 }
 
@@ -134,12 +134,13 @@ a.hero_btn:active {
 
 /* tagline（画像2枚） */
 .image_wrapper {
-    width: 100%;
+    width: 1440px;
     display: flex;
     align-items: flex-start;
     background-color: #FCECEC;
     padding-top: 120px;
     padding-bottom: 80px;
+    margin: 0 auto;
 }
 
 /* 左：全体の3/5 */
@@ -161,12 +162,14 @@ a.hero_btn:active {
 /* テキスト重ね */
 .tagline-box {
     position: relative;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .tagline-t {
     position: absolute;
-    top: 66%;
-    right: 13%;
+    top: 510px;
+    right: 190px;
 }
 
 .tagline_title {
@@ -183,12 +186,13 @@ a.hero_btn:active {
 }
 
 .intro_box {
-    width: 100%;
+    width: 1440px;
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
     background-color: #FCECEC;
     padding-bottom: 80px;
+    margin: 0 0 0 auto;
 }
 
 .intro {
@@ -215,11 +219,11 @@ a.hero_btn:active {
 
 /* 肌バリアの画像 */
 .supplement {
-    padding: relative;
     padding-bottom: 120px;
     position: relative;
     max-width: 1100px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .campaign_supplement {
@@ -393,19 +397,15 @@ a.hero_btn:active {
 }
 
 /* 共通 */
-.lifestyale_title_d {
-    width: clamp(120px, 10vw, 120px);
-    height: clamp(120px, 10vw, 120px);
-}
-
 .lifestyle_no {
     color: #E2417C;
     font-size: 42px;
+    line-height: 1;
 }
 
 .lifestyle_d {
     line-height: 1;
-    margin-top: -40px
+    margin-top: -10px
 }
 
 .lifestyle_text {
@@ -420,16 +420,25 @@ a.hero_btn:active {
     padding-bottom: 40px;
 }
 
-.lifestyale_title_d {
-    background-image: url(../image/03_leaf.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+.lifestyle_title_d {
+    position: relative;
 }
+
+.lifestyle_title_d::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    width: 86.5px;
+    height: 101px;
+    background: url(../image/03_leaf.png) no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
 
 /* morning,night */
 .lifestyle_minibox {
@@ -481,8 +490,6 @@ a.hero_btn:active {
 }
 
 .lineup_main {
-    margin: 0 auto;
-    width: min(100%, 1024px);
     padding-bottom: 80px;
 }
 
@@ -490,16 +497,12 @@ a.hero_btn:active {
 .lineup_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
+    gap: 120px 40px;
 }
 
-.merch_mainbox {
+.merch_box {
     position: relative;
-    width: 493px;
     text-align: center;
-    padding-bottom: 120px;
 }
 
 .lineup_img img {
@@ -532,13 +535,15 @@ a.hero_btn:active {
 
 
 .merch_namebox {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     width: 490px;
-    background-color: #fff;
+    background-color: #ffffff9c;
     padding: 10px 30px;
+    bottom: 0;
 }
 
 .merch_name {
@@ -577,8 +582,10 @@ a.merch_btn:active {
 
 /* present */
 .lineup_present {
+    position: relative;
     display: grid;
     place-items: center;
+    padding-top: 190px;
 }
 
 .present_title {
@@ -588,7 +595,6 @@ a.merch_btn:active {
 }
 
 .present_box {
-    position: relative;
     display: block;
     background-color: #fff;
     width: 705px;
@@ -598,6 +604,7 @@ a.merch_btn:active {
 
 .present_img {
     position: absolute;
+    top: 100px;
     width: 375px;
     margin: 0 auto;
     z-index: 5;
@@ -613,4 +620,234 @@ a.merch_btn:active {
 .present_text {
     font-size: 16px;
     padding: 24px 0;
+}
+
+
+/* Glowelle user Voice */
+.voice {
+    padding: 120px 0;
+}
+
+.voice_title {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.voice_subtutle {
+    width: 224px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.voice_text {
+    font-size: 16px;
+    text-align: center;
+}
+
+.voice_img_box {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0 60px 0;
+}
+
+.voice_img img {
+    width: 212px;
+    display: block;
+}
+
+.voice_ig {
+    width: 77px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.voice_user,
+.voice_user:link,
+.voice_user:visited {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    color: #444444;
+    text-decoration: none;
+}
+
+.voice_user:hover,
+.voice_user:active {
+    text-decoration: underline;
+    color: #444444;
+}
+
+/* 製品 */
+.info_section {
+    background-color: #F3F1F0;
+    padding: 120px 0;
+}
+
+.info_box {
+    background-color: #FCFEFF;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.info_title {
+    font-size: 36px;
+    text-align: center;
+    padding: 80px 0 40px 0;
+}
+
+.company_box {
+    font-size: 16px;
+}
+
+.product_dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 790px;
+    row-gap: 40px;
+    column-gap: 10px;
+    margin: 0 auto;
+    padding: 0 10px 40px 10px;
+    font-size: 16px
+}
+
+.pd_tytle {
+    width: 130px;
+}
+
+.pd_text {
+    width: 620px;
+}
+
+/* table */
+.pd_tablebox {
+    width: 790px;
+    border-top: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+}
+
+.pd_tabletytle {
+    padding: 24px 0 10px 0;
+}
+
+.pd_text {
+    padding-bottom: 30px;
+}
+
+.pd_table table {
+    background-color: #F3F3F3;
+    border-collapse: separate;
+    border-spacing: 30px 0;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.pd_table th {
+    font-size: 16px;
+    padding-top: 50px;
+}
+
+.pd_table td {
+    padding-top: 20px;
+}
+
+.pd_table .line-row td {
+    border-bottom: 1px solid #aaa;
+    width: 200px;
+    height: 1px;
+}
+
+/* 会社 */
+.company_info {
+    padding-bottom: 40px;
+}
+
+.company_line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 570px;
+    column-gap: 30px;
+    margin: 0 auto;
+    font-size: 16px;
+    padding-bottom: 32px;
+}
+
+.cp_title {
+    width: 130px;
+}
+
+.cp_text {
+    width: 310px;
+}
+
+.cp_text,
+.cp_text:link,
+.cp_text:visited {
+    display: block;
+    font-size: 16px;
+    color: #444444;
+    text-decoration: none;
+}
+
+.cp_text:hover,
+.cp_text:active {
+    text-decoration: underline;
+    color: #444444;
+}
+
+
+/* online store */
+.online-store {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.os_tytle {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.on-img {
+    width: 76.38vw;
+    display: block;
+    margin: 0 auto;
+}
+
+.os_shere{
+    font-size: 32px;
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+
+.os_subtytle {
+    padding-bottom: 10px;
+}
+
+.os_icon {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+img.os_img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* footer */
+.footer {
+    background-color: #FCECEC;
+    padding: 54px 0;
+    text-align: center;
+}
+
+.footer_copy {
+    font-size: 20px;
 }
