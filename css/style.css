@@ -2,8 +2,12 @@ body {
     font-family: fot-tsukuardgothic-std, sans-serif;
     font-style: normal;
     color: #444444;
+    overflow-x: hidden;
 }
 
+main {
+    overflow-x: hidden;
+}
 
 .container-s {
     margin: 0 auto;
@@ -13,10 +17,6 @@ body {
 .container-m {
     margin: 0 auto;
     width: min(100%, 1100px);
-}
-
-.br-sp {
-    display: none;
 }
 
 /* 背景は全幅にしたい */
@@ -603,21 +603,21 @@ a.merch_btn:active {
 
 .present_title {
     font-size: 36px;
-    padding: 80px 0 40px 0;
+    padding-bottom: 40px;
     text-align: center;
 }
 
 .present_box {
     display: block;
     background-color: #fff;
-    width: 90%;
+    width: 705px;
     text-align: center;
     padding-bottom: 40px;
 }
 
 .present_img {
     position: absolute;
-    top: 10px;
+    top: 100px;
     width: 375px;
     margin: 0 auto;
     z-index: 5;
@@ -867,7 +867,7 @@ img.os_img {
 
 
 /* メディアクエリ */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .container-s {
         margin: 0 auto;
         width: min(100%, 687px);
@@ -878,18 +878,9 @@ img.os_img {
         width: min(100%, 727px);
     }
 
-    .br-pc {
-        display: none;
-    }
-
-    .br-sp {
-        display: inline-block;
-    }
-
 
     .hero_inner {
         display: block;
-        padding-bottom: 0;
     }
 
     .hero_text {
@@ -901,10 +892,6 @@ img.os_img {
     .hero_subtitle,
     .hero_lead {
         white-space: normal;
-    }
-
-    .hero_btn {
-        font-size: 16px;
     }
 
     .hero_title {
@@ -925,34 +912,11 @@ img.os_img {
 
     .img-sp {
         display: block;
-        width: 300px;
-        height: auto;
-        position: relative;
-        z-index: 5;
-        margin: 0 auto;
-    }
-
-    .img-sp-after {
-        position: relative;
-    }
-
-    .img-sp-after::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        height: 0;
         width: 100%;
-        padding-top: 11.27%;
-        background: url(../image/mv-wave.svg) center bottom / 100% no-repeat;
-        z-index: 10;
+        height: auto;
     }
 
-    .hero::after {
-        display: none;
-    }
-
-    .hero_lead_b {
+    .hero_lead_before {
         padding-top: 40px;
         background-color: #FCECEC;
     }
@@ -966,7 +930,7 @@ img.os_img {
     .hero_btn_box {
         margin: 0 auto;
         text-align: center;
-        padding-bottom: 40px;
+        padding-bottom: 120px;
     }
 
     .hero_btn {
@@ -992,57 +956,38 @@ img.os_img {
 
     .image_silk {
         width: 40%;
-        height: auto;
+        height: 200px;
     }
 
     .tagline-t {
         position: absolute;
         transform: none;
         text-align: center;
-        top: 50%;
+        top: 59%;
         right: 8%;
     }
 
     .tagline_title {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .tagline_subtitle {
         font-size: 16px;
-        padding-left: 80px;
-    }
-
-    .intro_box {
-        position: relative;
-        padding-top: 40px;
-        padding-bottom: 100px;
-    }
-
-    .info_box ::after {
-        content: "";
-        position: absolute;
-        inset: 0 0 0 35%;
-        z-index: 2;
     }
 
     .intro {
-        position: relative;
-        z-index: 1;
-        background-color: #f9d6d6;
-        padding: 40px 30% 40px 40px;
         max-width: 100%;
-        margin-right: 0;
+        padding: 40px 160px 40px 20px;
     }
 
     .intro_title {
-        font-size: 20px;
-        padding-bottom: 30px;
+        font-size: 22px;
+        padding-bottom: 16px;
     }
 
     .intro_text {
         font-size: 16px;
     }
-
 
     .supplement {
         padding-bottom: 60px;
@@ -1052,44 +997,38 @@ img.os_img {
         width: 350px;
         height: auto;
         display: block;
-        margin: 0 auto;
     }
 
-
-
-    .campaign_supplement {
-        position: relative;
-        background: none;
-        width: clamp(260px,86vw,600px);
-        padding-bottom: 40px;
-        z-index: 0;
-        text-align: center;
-        margin: auto;
-    }
-
-    .leaf-top-sp {
-        position: relative;
-        display: inline-block;
-        z-index: 0;
+    .supplement {
+        padding: 0 50px 0 50px;
     }
 
     .leaf-top {
-        position: absolute;
         top: -80px;
-        left: 70px;
+        left: -30px;
         width: 210px;
         height: auto;
-        transform: translate(0,0);
-        z-index: 1;
-        pointer-events: none;
+        z-index: 4;
+    }
+
+    .leaf-bottom {
+        bottom: 0px;
+        right: -30px;
+        width: 180px;
+        height: auto;
+        z-index: 4;
+    }
+
+    .campaign_supplement {
+        position: relative;
     }
 
     .campaign_box {
-        position: static;
-        width: 80%;
+        position: absolute;
+        top: 40%;
+        width: 370px;
         padding: 30px;
-        margin: 0 auto;
-        z-index: 10;
+        right: 50px;
     }
 
     .campaign_title {
@@ -1101,47 +1040,15 @@ img.os_img {
         font-size: 16px;
     }
 
-    .campaign_onlinestore {
-        position: static;
-        font-size: 16px;
-        margin-right: 30px;
-        margin-left: auto;
-        text-align: right;
-        z-index: 10;
-    }
-
+    .campaign_onlinestore,
     .campaign_os {
-        position: static;
         font-size: 16px;
         margin-top: -20px;
-        margin-right: 70px;
-        margin-left: auto;
-        text-align: right;
-        z-index: 11;
     }
-
-    .arrow-img {
-        position: static;
-        width: 150px;
-        margin-left: auto;
-        margin-top: -10px;
-        padding-bottom: 10px;
-    }
-
-
-
-    .leaf-bottom {
-        bottom: 0px;
-        right: 20px;
-        width: 180px;
-        height: auto;
-        z-index: 4;
-    }
-
 
 
     .ingredients_title {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .ingredients_text {
@@ -1177,16 +1084,16 @@ img.os_img {
     }
 
     .dr_title {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .dr_name {
-        font-size: 20px;
+        font-size: 22px;
         padding-bottom: 20px;
     }
 
     .dr_text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .dr_box {
@@ -1286,20 +1193,12 @@ img.os_img {
         bottom: 0;
     }
 
-    .merch_title {
-        font-size: 14px;
-    }
-
     .merch_name {
         font-size: 12px;
     }
 
     .merch_jpy {
         font-size: 16px;
-    }
-
-    .present_title {
-        font-size: 24px;
     }
 
     .info_box {
