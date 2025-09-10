@@ -15,6 +15,10 @@ body {
     width: min(100%, 1100px);
 }
 
+.br-sp {
+    display: none;
+}
+
 /* 背景は全幅にしたい */
 .hero {
     position: relative;
@@ -28,7 +32,7 @@ body {
     left: 0;
     bottom: 0;
     height: 0;
-    width:100%;
+    width: 100%;
     padding-top: 11.27%;
     background: url(../image/mv-wave.svg) center bottom / 100% no-repeat;
     z-index: 5;
@@ -43,6 +47,8 @@ body {
     gap: 40px;
     position: relative;
     z-index: 3;
+    margin: 0 auto;
+    width: min(100%, 1100px);
 }
 
 
@@ -57,12 +63,17 @@ body {
 }
 
 /* 画像（右寄せ・下揃え） */
-.main-visual {
+.img-pc {
     position: absolute;
     width: min(47.5vw, 710px);
     right: -6.944vw;
     bottom: 0;
 }
+
+.img-sp {
+    display: none;
+}
+
 
 /* テキスト装飾 */
 .hero_title {
@@ -385,6 +396,8 @@ a.hero_btn:active {
     width: 300px;
 }
 
+
+
 /* glowellw 1day */
 .lifestyle {
     position: relative;
@@ -590,21 +603,21 @@ a.merch_btn:active {
 
 .present_title {
     font-size: 36px;
-    padding-bottom: 40px;
+    padding: 80px 0 40px 0;
     text-align: center;
 }
 
 .present_box {
     display: block;
     background-color: #fff;
-    width: 705px;
+    width: 90%;
     text-align: center;
     padding-bottom: 40px;
 }
 
 .present_img {
     position: absolute;
-    top: 100px;
+    top: 10px;
     width: 375px;
     margin: 0 auto;
     z-index: 5;
@@ -819,7 +832,7 @@ a.merch_btn:active {
     margin: 0 auto;
 }
 
-.os_shere{
+.os_shere {
     font-size: 32px;
     padding-top: 40px;
     padding-bottom: 120px;
@@ -850,4 +863,456 @@ img.os_img {
 
 .footer_copy {
     font-size: 20px;
+}
+
+
+/* メディアクエリ */
+@media screen and (max-width: 767px) {
+    .container-s {
+        margin: 0 auto;
+        width: min(100%, 687px);
+    }
+
+    .container-m {
+        margin: 0 auto;
+        width: min(100%, 727px);
+    }
+
+    .br-pc {
+        display: none;
+    }
+
+    .br-sp {
+        display: inline-block;
+    }
+
+
+    .hero_inner {
+        display: block;
+        padding-bottom: 0;
+    }
+
+    .hero_text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero_title,
+    .hero_subtitle,
+    .hero_lead {
+        white-space: normal;
+    }
+
+    .hero_btn {
+        font-size: 16px;
+    }
+
+    .hero_title {
+        font-size: 18px;
+        margin-bottom: 16px;
+        padding-left: 40px;
+    }
+
+    .hero_subtitle {
+        font-size: 24px;
+        margin-bottom: 30px;
+        padding-left: 30px;
+    }
+
+    .img-pc {
+        display: none;
+    }
+
+    .img-sp {
+        display: block;
+        width: 300px;
+        height: auto;
+        position: relative;
+        z-index: 5;
+        margin: 0 auto;
+    }
+
+    .img-sp-after {
+        position: relative;
+    }
+
+    .img-sp-after::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 0;
+        width: 100%;
+        padding-top: 11.27%;
+        background: url(../image/mv-wave.svg) center bottom / 100% no-repeat;
+        z-index: 10;
+    }
+
+    .hero::after {
+        display: none;
+    }
+
+    .hero_lead_b {
+        padding-top: 40px;
+        background-color: #FCECEC;
+    }
+
+    .hero_lead {
+        font-size: 16px;
+        margin-bottom: 52px;
+        text-align: center;
+    }
+
+    .hero_btn_box {
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .hero_btn {
+        font-size: 16px;
+    }
+
+    .main-visual {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .image_wrapper {
+        position: relative;
+        flex-direction: row;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .image_glowelle {
+        width: 60%;
+    }
+
+    .image_silk {
+        width: 40%;
+        height: auto;
+    }
+
+    .tagline-t {
+        position: absolute;
+        transform: none;
+        text-align: center;
+        top: 50%;
+        right: 8%;
+    }
+
+    .tagline_title {
+        font-size: 22px;
+    }
+
+    .tagline_subtitle {
+        font-size: 16px;
+        padding-left: 80px;
+    }
+
+    .intro_box {
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+    .info_box ::after {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 35%;
+        z-index: 2;
+    }
+
+    .intro {
+        position: relative;
+        z-index: 1;
+        background-color: #f9d6d6;
+        padding: 40px 30% 40px 40px;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .intro_title {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+
+    .intro_text {
+        font-size: 16px;
+    }
+
+
+    .supplement {
+        padding-bottom: 60px;
+    }
+
+    .supplement_img {
+        width: 350px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+
+    .campaign_supplement {
+        position: relative;
+        background: none;
+        width: clamp(260px,86vw,600px);
+        padding-bottom: 40px;
+        z-index: 0;
+        text-align: center;
+        margin: auto;
+    }
+
+    .leaf-top-sp {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+    }
+
+    .leaf-top {
+        position: absolute;
+        top: -80px;
+        left: 70px;
+        width: 210px;
+        height: auto;
+        transform: translate(0,0);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .campaign_box {
+        position: static;
+        width: 80%;
+        padding: 30px;
+        margin: 0 auto;
+        z-index: 10;
+    }
+
+    .campaign_title {
+        font-size: 22px;
+    }
+
+    .campaign_subtitle,
+    .campaign_text {
+        font-size: 16px;
+    }
+
+    .campaign_onlinestore {
+        position: static;
+        font-size: 16px;
+        margin-right: 30px;
+        margin-left: auto;
+        text-align: right;
+        z-index: 10;
+    }
+
+    .campaign_os {
+        position: static;
+        font-size: 16px;
+        margin-top: -20px;
+        margin-right: 70px;
+        margin-left: auto;
+        text-align: right;
+        z-index: 11;
+    }
+
+    .arrow-img {
+        position: static;
+        width: 150px;
+        margin-left: auto;
+        margin-top: -10px;
+        padding-bottom: 10px;
+    }
+
+
+
+    .leaf-bottom {
+        bottom: 0px;
+        right: 20px;
+        width: 180px;
+        height: auto;
+        z-index: 4;
+    }
+
+
+
+    .ingredients_title {
+        font-size: 24px;
+    }
+
+    .ingredients_text {
+        font-size: 16px;
+        padding-bottom: 80px;
+    }
+
+    .ingredients_img {
+        width: 150px;
+        padding-bottom: 10px;
+    }
+
+    .ingredients_name {
+        font-size: 16px;
+    }
+
+    .ingredients_ex {
+        font-size: 14px;
+        padding-top: 20px;
+    }
+
+    .ingredients_box {
+        width: 150px;
+        gap: 15px;
+    }
+
+    .ingredients_mainbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 80px;
+    }
+
+    .dr_title {
+        font-size: 14px;
+    }
+
+    .dr_name {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .dr_text {
+        font-size: 16px;
+    }
+
+    .dr_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0 30px;
+    }
+
+    .ingredients_dr {
+        flex: 1;
+        /* テキスト側を広めにとる */
+    }
+
+    .dr_img {
+        flex-shrink: 0;
+        /* 画像が縮まないように固定 */
+    }
+
+    .dr_img {
+        width: 150px;
+        height: auto;
+        display: block;
+    }
+
+    .lifestyle_title {
+        font-size: 24px;
+        padding: 80px 0;
+    }
+
+    .lifestyle_no {
+        font-size: 32px;
+    }
+
+    .lifestyle_time {
+        font-size: 48px;
+        padding-bottom: 20px;
+    }
+
+    .lifestyle_text {
+        font-size: 16px;
+    }
+
+    .lifestyle_img {
+        width: 300px;
+    }
+
+    .lifestyle_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 120px;
+    }
+
+    .lifestyle_minibox {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lifestyle_title_d::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        display: block;
+        width: 66.5px;
+        height: 101px;
+        background: url(../image/03_leaf.png) no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .lineup_title {
+        font-size: 24px;
+    }
+
+    .lineup_subtytle {
+        font-size: 36px;
+    }
+
+    .merch_namebox {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        background-color: #ffffff9c;
+        padding: 10px 10px;
+        bottom: 0;
+    }
+
+    .merch_title {
+        font-size: 14px;
+    }
+
+    .merch_name {
+        font-size: 12px;
+    }
+
+    .merch_jpy {
+        font-size: 16px;
+    }
+
+    .present_title {
+        font-size: 24px;
+    }
+
+    .info_box {
+        background-color: #FCFEFF;
+        width: 767px;
+        margin: 0 auto;
+    }
+
+    .info_box {
+        background-color: #FCFEFF;
+        width: 682px;
+        margin: 0 auto;
+    }
+
+
 }
