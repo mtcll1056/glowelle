@@ -1163,9 +1163,12 @@ img.os_img {
     }
 
 
+    .ingredients {
+        padding-bottom: 60px;
+    }
 
     .ingredients_title {
-        font-size: 20px;
+        font-size: 24px;
         white-space: nowrap;
     }
 
@@ -1231,11 +1234,22 @@ img.os_img {
 
     .dr_name {
         font-size: 22px;
-        padding-bottom: 20px;
+        padding-bottom: 16px;
     }
 
     .dr_text {
         font-size: 14px;
+    }
+
+    .dr_box {
+        display: inline;
+    }
+
+    .dr_sp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 
 
@@ -1246,12 +1260,7 @@ img.os_img {
     }
 
     .dr_img {
-        flex-shrink: 0;
-        /* 画像が縮まないように固定 */
-    }
-
-    .dr_img {
-        width: 150px;
+        width: 110px;
         height: auto;
         display: block;
     }
@@ -1271,7 +1280,7 @@ img.os_img {
     }
 
     .lifestyle_text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .lifestyle_img {
@@ -1314,7 +1323,7 @@ img.os_img {
     }
 
     .lineup_subtytle {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .lineup_grid {
@@ -1341,16 +1350,59 @@ img.os_img {
         font-size: 16px;
     }
 
+    .merch_btn_box {
+        padding-top: 20px;
+    }
+
+    .present_title {
+        padding-top: 80px;
+        font-size: 24px;
+    }
+
+    .present_img {
+        width: 280px;
+    }
+
+    .lineup_present {
+        padding-top: 140px;
+    }
+
+
+
+    .voice {
+        padding: 120px 16px;
+    }
+
+
+
     .info_box {
         background-color: #FCFEFF;
-        width: 767px;
+        width: 90%;
         margin: 0 auto;
     }
 
     .info_box {
         background-color: #FCFEFF;
-        width: 682px;
+    }
+
+    .info_title {
+        font-size: 24px;
+        padding: 40px 0 20px 0;
+    }
+
+    .product_dl {
+        display: inline;
+    }
+
+    .pd_tytle {
         margin: 0 auto;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .pd_text {
+        display: block;
+        width: 90%;
     }
 
 
