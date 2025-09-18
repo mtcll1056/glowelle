@@ -784,7 +784,7 @@ a.merch_btn:active {
     padding-bottom: 30px;
 }
 
-.pd_table table {
+.pd_table_pc table {
     background-color: #F3F3F3;
     border-collapse: separate;
     border-spacing: 30px 0;
@@ -792,20 +792,26 @@ a.merch_btn:active {
     padding-bottom: 40px;
 }
 
-.pd_table th {
+.pd_table_pc th {
     font-size: 16px;
     padding-top: 50px;
 }
 
-.pd_table td {
+.pd_table_pc td {
     padding-top: 20px;
 }
 
-.pd_table .line-row td {
+.line-row-pc td {
     border-bottom: 1px solid #aaa;
     width: 200px;
     height: 1px;
 }
+
+.pd_table_sp {
+    display: none;
+}
+
+
 
 /* 会社 */
 .company_info {
@@ -831,17 +837,17 @@ a.merch_btn:active {
     width: 310px;
 }
 
-.cp_text,
-.cp_text:link,
-.cp_text:visited {
+.cp_text_a,
+.cp_text_a:link,
+.cp_text_a:visited {
     display: block;
     font-size: 16px;
     color: #444444;
     text-decoration: none;
 }
 
-.cp_text:hover,
-.cp_text:active {
+.cp_text_a:hover,
+.cp_text_a:active {
     text-decoration: underline;
     color: #444444;
 }
@@ -1220,7 +1226,7 @@ img.os_img {
     }
 
     .ingredients_imgbox_pc {
-        display:none;
+        display: none;
     }
 
     .ingredients_mainbox {
@@ -1374,6 +1380,9 @@ img.os_img {
     }
 
 
+    .info_section {
+        padding: 80px 0;
+    }
 
     .info_box {
         background-color: #FCFEFF;
@@ -1391,19 +1400,131 @@ img.os_img {
     }
 
     .product_dl {
-        display: inline;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 10px;
+        width: 85%;
+        font-size: 14px;
+        margin: auto;
+        padding: 0 0 20px 0;
     }
 
     .pd_tytle {
-        margin: 0 auto;
-        text-align: center;
-        padding-bottom: 10px;
+        width: auto;
     }
 
     .pd_text {
-        display: block;
-        width: 90%;
+        width: auto;
     }
 
+    .pd_tablebox {
+        width: 85%;
+        padding: 0;
+    }
+
+    .pd_tabletytle {
+        font-size: 14px;
+    }
+
+    .pd_table_pc {
+        display: none;
+    }
+
+    .pd_table_sp {
+        display: inline;
+    }
+
+    .pd_table_sp table {
+        background-color: #F3F3F3;
+        border-collapse: separate;
+        border-spacing: 15px 0;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .pd_table_sp th {
+        font-size: 14px;
+        padding-top: 40px;
+    }
+
+    .pd_table_sp td {
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+    .pd_table_sp .line-row td {
+        border-bottom: 1px solid #aaa;
+        width: 200px;
+        height: 1px;
+    }
+
+    .pd_text {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    /* 会社概要 */
+    .info_title {
+        font-size: 24px;
+    }
+
+    .company_line {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 360px;
+        column-gap: 30px;
+        margin: 0 auto;
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+
+    .cp_title {
+        width: 98px;
+        font-size: 14px;
+    }
+
+    .cp_text {
+        width: 182px;
+        font-size: 14px;
+    }
+
+    .cp_text_a,
+    .cp_text_a:link,
+    .cp_text_a:visited {
+        font-size: 14px;
+    }
+
+    .online-store {
+        padding-top: 40px;
+    }
+
+    .os_tytle,
+    .os_subtytle {
+        font-size: 20px;
+    }
+
+    .os_icon {
+        column-gap: 30px;
+    }
+
+    img.os_img {
+        width: 30px;
+        height: auto;
+    }
+
+    .os_shere {
+        padding-top: 20px;
+        padding-bottom: 40px
+    }
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    .footer_copy {
+        font-size: 14px;
+    }
+}
 
 }
